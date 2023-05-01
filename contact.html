@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,
+    <svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>
+    <text y=%22.9em%22 font-size=%2290%22>👩‍💻</text></svg>">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Contact</title>
+    <style>
+        .copied
+        {
+            font-family:  'Roboto Mono',  monospace;
+            font-size:     0.8em;
+    
+        }
+    </style>
+</head>
+<body>
+    <div class = 'container'>
+    <h1>Contact me</h1>
+      </br></br><p id="thankyou">Thank you for visiting my world. Please do not hesitate to get in touch with me.</p>
+      </br></br>
+        <p id="myText">wtthumon@gmail.com   
+        <span>
+          <button class="btn" onclick="copyContent()" width="2em" height="2em">
+            <img src="./models/copy-icon.svg" width="15em" height="15em"/>
+          </button>
+        </span>
+        </p>
+      </br></br><p id ="copied" class="copied hidden">Email copied to clipboard.</p>
+    </div>
+    <script>
+        let text = document.getElementById('myText').innerHTML;
+        const copyContent = async () => {
+          try {
+            await navigator.clipboard.writeText(text);
+            console.log('Content copied to clipboard');
+            document.getElementById("copied").classList.add('visible')
+          } catch (err) {
+            console.error('Failed to copy: ', err);
+          }
+        }
+      </script>
+</body>
+</html>

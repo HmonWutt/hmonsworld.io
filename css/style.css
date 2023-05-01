@@ -1,0 +1,250 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
+
+
+*{  
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+    /*box-shadow:  rgba(0, 0, 0, 0.24) 0px 3px 8px;;*/
+}
+
+body{
+  color: black;
+}
+
+.hidden {
+  visibility:hidden;
+
+}
+.visible{
+  visibility: visible;
+}
+
+#loadingscreen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: black; 
+  z-index: 1000;
+  color: white;
+}
+
+#loader-wrapper{
+  position: absolute;
+  width: 90%;
+  max-width: 1080px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  justify-content: space-between;
+}
+
+#progress {
+  width: 320px;
+  height: 64px;
+  background-color: hsl(202, 90%, 25%);
+  border-radius: 99px;
+  overflow: hidden;
+  position: relative;
+}
+
+#progress-bar {
+width: 0%;
+height: 100%;
+background: white;
+}
+
+#loading {
+font-size: 20px;
+font-weight: 600;
+letter-spacing: .5px;
+text-transform: uppercase;  
+color: black;
+
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.button{
+  font-family: 'Roboto Mono', monospace;
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  border: none;
+  background-color: white;
+  color: black;
+  border-radius: 99px;
+}
+
+.cta {       
+width: 320px;
+height: 64px;
+font-size: 20px;
+background: hsl(202, 98%, 17%);
+color: white;
+}
+
+.cta:hover{
+background: white;
+color: black;
+}
+
+@media only screen and (max-width: 600px) {
+.cta {
+width: 100%;
+}
+#progress {
+width: 100%;
+}
+}
+
+.canvas
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline:none;
+    background: rgb(19,15,5);
+    background: linear-gradient(0deg, rgba(19,15,5,1) 32%, rgba(10,154,230,1) 100%);
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;   
+}
+  
+.sign {
+  font-family: 'Roboto Mono', monospace;
+  position: fixed;
+  padding: 0 20px 0 20px;
+  width: 100%;
+  max-width: 560px;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 16px;
+  box-sizing: border-box;
+  z-index: 77;
+  text-align: center;
+  color:aliceblue;
+  font-size: 1.5rem;
+  text-shadow: 3px 3px 2px rgba(4, 0, 0, 1); 
+}
+  
+
+#menu__toggle {
+  opacity: 0;
+  z-index: 100;
+}
+#menu__toggle:checked + .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked + .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+#menu__toggle:checked + .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  left: 0 !important;
+}
+.menu__btn {
+  font-family: 'Roboto Mono', monospace;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 100;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #090909;
+  transition-duration: .25s;
+  z-index: 100;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+
+}
+.menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color:#053e5c;
+  
+  box-shadow: 2px 2px 6px rgba(6, 6, 6, 0.966);
+  transition-duration: .25s;
+  text-shadow: 3px 3px 2px rgba(4, 0, 0, 1);
+  z-index: 99;
+}
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #f5f0f0;
+  font-family: 'Roboto Mono',  monospace;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s;
+  z-index: 100;
+
+  
+}
+.menu__item:hover {
+  background-color: black;
+}
+
+.container{
+  background-color: #053e5c;
+  width:100vw;
+  height:100vh;
+  color:aliceblue;
+  text-shadow: 3px 3px 2px rgba(4, 0, 0, 1);
+  padding: 5rem;
+}
+
+@media only screen and (max-width: 600px) 
+{
+  .container
+  {
+  padding:2rem;
+  width: 100%;
+  height: 100%;
+  }
+ 
+}
+
+.masterthesis {
+  text-shadow: 1px 0px 2px rgb(10, 10, 10);
+  color: black;
+  font-weight: 900;
+}

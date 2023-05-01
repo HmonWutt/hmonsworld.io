@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+
+    <script type="importmap">
+    {
+        "imports": {
+        "three": "https://unpkg.com/three@0.151.3/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.151.3/examples/jsm/"
+        }      
+        
+    }
+    </script>
+   
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,
+    <svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>
+    <text y=%22.9em%22 font-size=%2290%22>👩‍💻</text></svg>">
+
+
+    <title>Index</title>
+</head>
+
+<body>
+    <div id="loadingscreen">  
+        <div id="loader-wrapper">
+            <div class="title"><h1>Hello!</h1></div>
+             <h2 style="text-align: left;"><span>I'm Hmon. </span></h2>
+            <div id="progress">
+                <span id="loading">Loading...</span>
+                <div id="progress-bar"></div>
+            </div>
+            <button class="button cta" id="start-button" href="#start" style="display: none;"> Welcome to my world <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+        </div>
+    </div>
+
+<!----------------------------------------------------------------------------------------------------------------->
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+        <span></span>
+        </label>
+
+        <ul class="menu__box">
+            <li><a class="menu__item" href="index.html">Hmon's world</a></li>
+            <li><a class="menu__item" href="about.html">About</a></li>
+            <li><a class="menu__item" href="contact.html">Contact</a></li>
+            <li><a class="menu__item" href="credits.html">Credits</a></li>		
+        </ul>
+    </div>
+
+<!---------------------------------------------------------------------------------------------------------------------->
+    <canvas class="canvas" id="canvas"></canvas>
+    <div id="instruction" class="sign">Please drag your mouse to explore.</div>
+    <div id='skillpopup' class="popup sign hidden">At 16, I moved to Singapore to study nursing.</div>
+    <div id='popup' class="popup sign hidden">After discovering my interest in human cognition and behavior, I made the decision to pursue a degree in psychological research.</div>
+    <div id='popup' class="popup sign hidden">To enhance my research skills, I relocated to Sweden to pursue a Master of Science degree in psychology.</div>
+    <div id='popup' class="popup sign hidden">I was intorduced to programming and my inner problem-solver fell in love with it.</div>
+    <div id='popup' class="popup sign hidden">Having begun my programming journey with Python and R, I am currently expanding my skill set by learning web development.</div>
+    <div id='popup' class="popup sign hidden">My aspiration is to solve real-world problems with empathy and a human-centered design.</div>
+  
+    <div><a href="https://www.freepik.com/free-vector/pastel-ombre-background-pink-purple_16447966.htm#query=texture%20gradient%20pastel&position=4&from_view=search&track=ais">Image by rawpixel.com</a> on Freepik</div>
+    <div><a href="https://www.freepik.com/free-photo/low-angle-shot-mesmerizing-starry-sky_12448591.htm#query=night%20sky&position=1&from_view=search&track=ais">Image by wirestock</a> on Freepik</div>
+    <div>Image by <a href="https://www.freepik.com/free-vector/starry-sky-gradient-background_5418493.htm?query=night%20sky#from_view=detail_alsolike">Freepik</a></div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11/dist/gsap.min.js"></script>
+    <script type="module" src="js/rotation.js"></script>  
+    
+</body>
+</html>
+
