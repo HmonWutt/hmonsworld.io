@@ -230,6 +230,7 @@ width: 100%;
   color:aliceblue;
   text-shadow: 3px 3px 2px rgba(4, 0, 0, 1);
   padding: 5rem;
+  overflow: scroll;
 }
 
 @media only screen and (max-width: 600px) 
