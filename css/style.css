@@ -1,7 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
 
-
 *{  
     box-sizing: border-box;
     margin: 0;
@@ -12,6 +11,7 @@
 
 body{
   color: black;
+  background-size: cover;
 }
 
 .hidden {
@@ -229,7 +229,7 @@ width: 100%;
   min-height:100vh;
   color:aliceblue;
   text-shadow: 3px 3px 2px rgba(4, 0, 0, 1);
-  padding: 5rem;
+  padding: 5rem ;
   overflow: scroll;
 }
 
