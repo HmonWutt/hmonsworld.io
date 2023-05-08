@@ -14,6 +14,10 @@ body{
   background-size: cover;
 }
 
+html, body {
+  height: 100%;
+}
+
 .hidden {
   visibility:hidden;
 
@@ -224,13 +228,14 @@ width: 100%;
 }
 
 .container{
-  background-color: #053e5c;
+  background-color: black;
   width:100vw;
-  min-height:100vh;
+  height:100%;
   color:aliceblue;
   text-shadow: 3px 3px 2px rgba(4, 0, 0, 1);
-  padding: 5rem ;
-  overflow: scroll;
+  padding: 2rem ;
+  background-overflow: visible;
+
 }
 
 @media only screen and (max-width: 600px) 
@@ -246,6 +251,8 @@ width: 100%;
 
 .masterthesis {
   text-shadow: 1px 0px 2px rgb(10, 10, 10);
-  color: black;
+  color: rgb(215, 243, 6);
   font-weight: 900;
+
 }
+a:link { text-decoration: none; }
