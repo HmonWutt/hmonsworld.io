@@ -40,6 +40,9 @@
             await navigator.clipboard.writeText(text);
             console.log('Content copied to clipboard');
             document.getElementById("copied").classList.add('visible')
+            setTimeout(() => {
+              document.getElementById("copied").classList.remove('visible');
+              }, 1000);
           } catch (err) {
             console.error('Failed to copy: ', err);
           }
