@@ -33,7 +33,8 @@
       </br></br><p id ="copied" class="copied hidden">Email copied to clipboard.</p>
     </div>
     <script>
-        let text = document.getElementById('myText').innerHTML;
+        let text = document.getElementById('myText').textContent;
+        console.log(text)
         const copyContent = async () => {
           try {
             await navigator.clipboard.writeText(text);
