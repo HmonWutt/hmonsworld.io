@@ -5,9 +5,7 @@ import { TWEEN } from "./tween.module.min.js";
 
 const scene = new THREE.Scene();
 
-const texture = new THREE.TextureLoader().load(
-  "../models/low-angle-shot-mesmerizing-starry-sky.jpg"
-);
+
 scene.background = 0x1c2e4a;
 
 const camera = new THREE.PerspectiveCamera(
@@ -89,20 +87,6 @@ loader.load("./models/gardanah_fictional/scene.gltf", function (gltf) {
   scene.add(model);
   globe = model;
 });
-
-//let icon;
-
-//loader.load("../models/tech_icon.glb", function (gltf) {
- // var model = gltf.scene;
-  //model.rotation.z = 0.28//for plant_saturn_fantasy
- // model.rotation.x = Math.PI;
- // gltf.scene.scale.set(2.5, 2.5, 2.5);
-  //gltf.scene.scale.set(1,1,1)
- // gltf.scene.position.set(-1, 1.5, 7);
- // scene.add(model);
-//  icon = model;
-//  icon.visible = false;
-//});
 
 let mixer;
 let action;
