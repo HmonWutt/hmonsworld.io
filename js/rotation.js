@@ -80,7 +80,7 @@ scene.add(mesh);
 
 const loader = new GLTFLoader(loadingManager);
 let globe;
-loader.load("../models/gardanah_fictional/scene.gltf", function (gltf) {
+loader.load("./models/gardanah_fictional/scene.gltf", function (gltf) {
   var model = gltf.scene;
   //model.rotation.z = 0.28//for plant_saturn_fantasy
   gltf.scene.scale.set(0.003, 0.003, 0.003);
@@ -90,24 +90,24 @@ loader.load("../models/gardanah_fictional/scene.gltf", function (gltf) {
   globe = model;
 });
 
-let icon;
+//let icon;
 
-loader.load("../models/tech_icon.glb", function (gltf) {
-  var model = gltf.scene;
+//loader.load("../models/tech_icon.glb", function (gltf) {
+ // var model = gltf.scene;
   //model.rotation.z = 0.28//for plant_saturn_fantasy
-  model.rotation.x = Math.PI;
-  gltf.scene.scale.set(2.5, 2.5, 2.5);
+ // model.rotation.x = Math.PI;
+ // gltf.scene.scale.set(2.5, 2.5, 2.5);
   //gltf.scene.scale.set(1,1,1)
-  gltf.scene.position.set(-1, 1.5, 7);
-  scene.add(model);
-  icon = model;
-  icon.visible = false;
-});
+ // gltf.scene.position.set(-1, 1.5, 7);
+ // scene.add(model);
+//  icon = model;
+//  icon.visible = false;
+//});
 
 let mixer;
 let action;
 let runner;
-loader.load("../models/runner/scene.gltf", function (gltf) {
+loader.load("./models/runner/scene.gltf", function (gltf) {
   var model = gltf.scene;
   model.position.set(0, -0.7, 0);
   gltf.scene.scale.set(0.35, 0.35, 0.35);
